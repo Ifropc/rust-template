@@ -1,0 +1,1 @@
+Run `nix-develop` to run the shell 
