@@ -22,13 +22,13 @@
             openssl
             pkg-config
 	    libudev-zero
-	    #(rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
-            #    extensions = [ "rust-src" ];
-            #}))
-	    (rust-bin.stable.latest.default.override {
-               extensions = [ "rust-src" ];
-	       targets = [ "wasm32-unknown-unknown" ];
-            })
+	    (rust-bin.selectLatestNightlyWith (toolchain: toolchain.default.override {
+                extensions = [ "rust-src" ];
+            }))
+	    #(rust-bin.stable.latest.default.override {
+            #   extensions = [ "rust-src" ];
+	    #   targets = [ "wasm32-unknown-unknown" ];
+            #})
           ];
         };
       }
